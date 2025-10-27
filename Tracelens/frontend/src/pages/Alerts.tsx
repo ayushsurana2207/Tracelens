@@ -8,12 +8,13 @@ import {
 } from "../lib/mockData";
 
 function SevPill({ sev }: { sev: string }) {
-  const cls = {
+  const severityMap: Record<string, string> = {
     LOW: "bg-sky-500/20 text-sky-300 border-sky-500/20",
     MEDIUM: "bg-amber-500/20 text-amber-300 border-amber-500/20",
     HIGH: "bg-orange-500/20 text-orange-300 border-orange-500/20",
     CRITICAL: "bg-rose-600/20 text-rose-300 border-rose-600/20",
-  }[sev as any] ?? "badge";
+  };
+  const cls = severityMap[sev] ?? "badge";
   return <span className={`badge ${cls}`}>{sev}</span>;
 }
 
