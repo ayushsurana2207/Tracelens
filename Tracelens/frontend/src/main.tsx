@@ -7,6 +7,9 @@ import Dashboard from "./pages/Dashboard";
 import LLMTracking from "./pages/LLMTracking";
 import AgentWorkflow from "./pages/AgentWorkflow";
 import Alerts from "./pages/Alerts";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +20,11 @@ const router = createBrowserRouter([
       { path: "llm-tracking", element: <LLMTracking /> },
       { path: "agent-workflow", element: <AgentWorkflow /> },
       { path: "alerts", element: <Alerts /> },
+      { path: "profile", element: <Profile /> },
     ],
   },
+  { path: "/login", element: <Login /> },
+  { path: "/register", element: <Register /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
